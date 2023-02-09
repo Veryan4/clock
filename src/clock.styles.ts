@@ -1,18 +1,10 @@
 import { css } from "lit";
 
 export const styles = css`
-  .clock-dial {
-    z-index: 1;
-    position: relative;
-    top: -100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(98% - 6px);
-    height: calc(98% - 6px);
-  }
   .clock-wrap {
     aspect-ratio: 1 / 1;
     height: fit-content;
+    position: relative;
   }
   .clock {
     width: 100%;
@@ -24,6 +16,15 @@ export const styles = css`
     border-radius: 50%;
     transition: all ease 0.2s;
     z-index: 2;
+  }
+  .clock-dial {
+    z-index: 1;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(98% - 6px);
+    height: calc(98% - 6px);
   }
   .dot {
     background-color: var(--dot-color);
